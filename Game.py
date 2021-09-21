@@ -32,7 +32,7 @@ pygame.display.set_icon(icon)
 # Effects sounds
 """ For putting a background song i will let an example here:
 mixer.load.music("NameOfTheFile")
-mixer music.play(-1) - that minus is basically for putting the song in loop."""
+mixer.music.play(-1) - that minus is basically for putting the song in loop."""
 
 # Gamer Over
 textY_EndGame = 255
