@@ -22,11 +22,11 @@ def show_score(x, y):
 
 
 # Background
-background = pygame.image.load(r"images\background.png")
+background = pygame.image.load(r"game\images\background.png")
 
 # Title and Icon
 pygame.display.set_caption("FelippoDev Game")
-icon = pygame.image.load(r"images\alien.png")
+icon = pygame.image.load(r"game\images\alien.png")
 pygame.display.set_icon(icon)
 
 # Effects sounds
@@ -46,7 +46,7 @@ def game_over():
 
 
 # Player
-playerImg = pygame.image.load(r"images\spaceship.png")
+playerImg = pygame.image.load(r"game\images\spaceship.png")
 playerImg = pygame.transform.scale(playerImg, (45, 45))
 playerX = 380
 playerY = 500
@@ -67,7 +67,7 @@ enemyYMov = []
 num_enemies = 6
 
 for i in range(num_enemies):
-    enemyImg.append(pygame.image.load(r"images\enemy.png"))
+    enemyImg.append(pygame.image.load(r"game\images\enemy.png"))
     enemyImg.append(pygame.transform.scale(enemyImg[i], (35, 35)))
     enemyX.append(random.randint(0, 580))
     enemyY.append(random.randint(5, 140))
@@ -80,7 +80,7 @@ def enemy(x, y):
 
 
 # Bullet
-bulletImg = pygame.image.load(r"images\bullet.png")
+bulletImg = pygame.image.load(r"game\images\bullet.png")
 bulletImg = pygame.transform.scale(bulletImg, (15, 15))
 bulletXMov = playerX
 bulletYMov = playerY
@@ -127,7 +127,7 @@ while running:
 
             if event.key == pygame.K_SPACE:
                 if bullet_state is "ready":
-                    bullet_sound = mixer.Sound(r'song_effects\laser_beam.mp3')
+                    bullet_sound = mixer.Sound(r'game\song_effects\laser_beam.mp3')
                     bullet_sound.play()
                     bulletXMov = playerX
                     fire_bullet(bulletXMov, bulletYMov)
@@ -155,7 +155,7 @@ while running:
     # Enemy movement
     for i in range(num_enemies):
         # Game over
-        if enemyY[i] > 350:
+        if enemyY[i] > 420:
             for j in range(num_enemies):
                 enemyY[j] = 2000
             game_over()
@@ -177,7 +177,7 @@ while running:
             score_value += 1
             enemyX[i] = random.randint(0, 580)
             enemyY[i] = random.randint(5, 140)
-            collision_sound = mixer.Sound(r'song_effects\explosion.mp3')
+            collision_sound = mixer.Sound(r'game\song_effects\explosion.mp3')
             collision_sound.play()
         enemy(enemyX[i], enemyY[i])
 
