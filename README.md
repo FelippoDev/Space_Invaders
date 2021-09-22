@@ -9,7 +9,7 @@ For recreating this classic game I utilized python and his lib pygame for buildi
 It was one of my first projects in python. I basically 
 started this project not only to learn python but also to see how it is to develop a game and all the logic behind its development.
 
-## How to play the game
+## How to run
 
 - Clone github repository in your local system ```git clone https://github.com/FelippoDev/Space_Invaders.git```
 - Move in bot repository ```cd game```
