@@ -14,4 +14,4 @@ started this project not only to learn python but also to see how it is to devel
 - Clone github repository in your local system ```git clone https://github.com/FelippoDev/Space_Invaders.git```
 - Move in bot repository ```cd game```
 - Install all the libraries mentioned in requirements.txt using ```pip install -r requirements.txt```
-- Run Python file ```python game.py```
+- Run Python file ```python play.py```
